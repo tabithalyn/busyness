@@ -9,9 +9,9 @@ const variants = {
     opacity: 1,
     x: "0%",
     transition: {
-      delayChildren: 0.1,
+      delayChildren: 0.05,
       staggerChildren: 0.1,
-      duration: 0.3
+      duration: 0.2
     }
   }
 }

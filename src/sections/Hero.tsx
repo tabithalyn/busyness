@@ -1,15 +1,8 @@
-import Footer from "../components/Footer";
-import Benefits from "./Benefits";
-import Contact from "./Contact";
-import Info from "./Info";
-import Players from "./Players";
-import Pricing from "./Pricing";
 
-const Hero = ({ toggle }:{toggle:boolean}) => {
+const Hero = () => {
   
   return (
-    <>
-    <div className={`grid grid-cols-1 p-20 items-center ${toggle ? "hidden" : "visible"}`}>
+    <div className="grid grid-cols-1 p-20 mt-5 items-center">
       <div className="mb-10">
         <div className="text-white text-5xl font-extrabold">WELCOME</div>
         <div className="text-white text-xl font-bold">to your new home</div>
@@ -28,14 +21,7 @@ const Hero = ({ toggle }:{toggle:boolean}) => {
           <div className="font-normal">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</div>
         </div>
       </div>
-      <Info />
-      <Benefits />
-      <Players />
-      <Pricing />
-      <Contact />
     </div>
-    <Footer />
-    </>
   );
 }
  

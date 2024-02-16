@@ -20,8 +20,8 @@ const Benefits = () => {
   return (
     <div className="h-[95vh] flex items-center justify-center">
       <m.div
-        transition={{ duration: 0.3, delay: 0.1 }}
-        initial={{ x: "-100%" }}
+        transition={{ duration: 0.4, delay: 0.1 }}
+        initial={{ x: "-110%" }}
         whileInView={{ x: "0%" }}
         className="w-5/6 bg-white p-20 rounded-xl mt-20"
       >

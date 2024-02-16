@@ -1,4 +1,5 @@
 import { motion as m } from "framer-motion";
+import { Tooltip } from "react-tooltip";
 
 const variants = {
   hidden: {
@@ -58,16 +59,28 @@ const Footer = () => {
           variants={variants}
           className="text-sm opacity-80 flex flex-wrap items-center"
         >
-          Developed with &hearts; by Tabitha Lyn <a href="" title="Tabitha Lyn's GitHub"><i className="fa-brands fa-github ml-2"></i></a>
+          Developed with &hearts; by Tabitha Lyn <a href="" data-tooltip-content="Tabitha Lyn's GitHub" data-tooltip-id="github"><Tooltip id="github" style={{ backgroundColor: "white", color: "#222", padding: "5px 10px"}} /><i className="fa-brands fa-github ml-2"></i></a>
         </m.div>
         <m.div
           variants={variants}
-          className="flex flex-wrap gap-4 items-center mr-5"
+          className="flex flex-wrap gap-4 items-center mr-5 text-sm"
         >
-          <m.i variants={variants} className="fa-brands fa-facebook"></m.i>
-          <m.i variants={variants} className="fa-brands fa-x-twitter"></m.i>
-          <m.i variants={variants} className="fa-brands fa-instagram"></m.i>
-          <m.i variants={variants} className="fa-brands fa-linkedin"></m.i>
+          <a href="" data-tooltip-content="Facebook" data-tooltip-id="facebook" data-tooltip-place="top">
+            <Tooltip id="facebook" style={{ backgroundColor: "white", color: "#222", padding: "5px 10px"}} />
+            <m.i variants={variants} className="fa-brands fa-facebook text-lg"></m.i>
+          </a>
+          <a href="" data-tooltip-content="Twitter/X" data-tooltip-id="twitterx" data-tooltip-place="top">
+            <Tooltip id="twitterx" style={{ backgroundColor: "white", color: "#222", padding: "5px 10px"}} />
+            <m.i variants={variants} className="fa-brands fa-x-twitter text-lg"></m.i>
+          </a>
+          <a href="" data-tooltip-content="Instagram" data-tooltip-id="instagram" data-tooltip-place="top">
+            <Tooltip id="instagram" style={{ backgroundColor: "white", color: "#222", padding: "5px 10px"}} />
+            <m.i variants={variants} className="fa-brands fa-instagram text-lg"></m.i>
+          </a>
+          <a href="" data-tooltip-content="LinkedIn" data-tooltip-id="linkedin" data-tooltip-place="top">
+            <Tooltip id="linkedin" style={{ backgroundColor: "white", color: "#222", padding: "5px 10px"}} />
+            <m.i variants={variants} className="fa-brands fa-linkedin text-lg"></m.i>
+          </a>
         </m.div>
       </m.div>
     </div>
