@@ -1642,6 +1642,11 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-international-phone@^4.2.7:
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/react-international-phone/-/react-international-phone-4.2.7.tgz#0e9faa6db41fbe9290de9be2848a300c1364933d"
+  integrity sha512-42PMFKIf4EugAM3y8AVi1U76wEmE3qFKfhyL5AJCsCft1P/N9NLj73avp8D6e3oGNWHlph98olmBeLkWfiRvLQ==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
