@@ -23,6 +23,7 @@ const Players = () => {
       initial={{ x: "-100%" }}
       whileInView={{ x: "0%" }}
       transition={{ duration: 0.3, delay: 0.15 }}
+      id="PLAYERS"
     >
       <div className="w-5/6 bg-white flex flex-wrap justify-center rounded-xl h-4/5 overflow-hidden">
         <m.div

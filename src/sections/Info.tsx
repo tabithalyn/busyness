@@ -19,7 +19,7 @@ const variants = {
 
 const Info = () => {
   return (
-    <div className="flex flex-wrap items-center justify-around mb-20">
+    <div className="flex flex-wrap items-center justify-around mb-20" id="ABOUT">
       <m.div
         transition={{ duration: 0.3, delay: 0.1 }}
         initial={{ x: "-100%" }}

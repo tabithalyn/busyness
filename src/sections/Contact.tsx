@@ -30,7 +30,7 @@ const Contact = () => {
 
 
   return (
-    <div className="h-screen flex items-center justify-center mt-36">
+    <div className="h-screen flex items-center justify-center mt-36" id="CONTACT">
       <m.div
         transition={{ duration: 0.3, delay: 0.1 }}
         initial={{ x: "-100%" }}
@@ -50,7 +50,7 @@ const Contact = () => {
               <div className="w-full flex flex-wrap justify-between mb-8">
               <div className="w-3/5 flex flex-wrap">
                 <span className="mr-2 flex items-center">Email:</span>
-                <input type="email" name="email" id="email" className="w-[85%] border rounded" required />
+                <input type="email" name="email" id="email" className="w-[85%] border rounded" autoComplete="false" required />
               </div>
               <div className="w-2/5 flex flex-wrap">
                 <span className="mr-2 flex items-center">Phone Number:</span>

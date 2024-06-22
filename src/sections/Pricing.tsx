@@ -18,7 +18,7 @@ const variants = {
 
 const Pricing = () => {
   return (
-    <div className="h-screen mt-20 flex flex-wrap items-center justify-center">
+    <div className="h-screen mt-20 flex flex-wrap items-center justify-center" id="PRICING">
       <m.div
         className="h-[85vh] w-screen flex justify-center items-center mt-32 flex-wrap"
         initial={{ x: "-100%" }}

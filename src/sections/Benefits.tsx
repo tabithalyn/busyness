@@ -18,7 +18,7 @@ const variants = {
 
 const Benefits = () => {
   return (
-    <div className="h-[95vh] flex items-center justify-center">
+    <div className="h-[95vh] flex items-center justify-center" id="BENEFITS">
       <m.div
         transition={{ duration: 0.4, delay: 0.1 }}
         initial={{ x: "-110%" }}

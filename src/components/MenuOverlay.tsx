@@ -1,4 +1,5 @@
 import { AnimatePresence, motion as m } from "framer-motion";
+import Link from "react-scroll/modules/components/Link";
 
 const sideVariants = {
   closed: {
@@ -24,6 +25,7 @@ const sideVariants = {
 const MenuOverlay = ({ menuList }:{
   menuList: {title: string;}[];
 }) => {
+
   return (
     <AnimatePresence>
       <m.div
@@ -34,11 +36,15 @@ const MenuOverlay = ({ menuList }:{
       >
         <div className="w-3/12 pb-10 flex flex-wrap justify-center">
           {menuList.map((item:{title:string}, id:number) => (
-            <h1 key={id} className="text-white text-lg mb-6 justify-center mt-10 hover:scale-110 transition-all cursor-pointer w-full text-center">
-              <a href="/" className="text-3xl relative after:bg-white after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-200 cursor-pointer">
-                {item.title}
-              </a>
-            </h1>
+            <div key={id} className="text-white text-lg mb-6 justify-center flex mt-10 hover:scale-110 transition-all cursor-pointer w-full text-center">
+              <p
+                className="text-3xl relative after:bg-white after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+              >
+                <Link to={item.title} smooth={true} duration={200}>
+                  {item.title}
+                </Link>
+              </p>
+            </div>
           ))}
         </div>
       </m.div>
