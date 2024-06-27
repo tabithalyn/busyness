@@ -1,4 +1,6 @@
 import { motion as m } from "framer-motion";
+import { PLAYERS } from "../data/PLAYERS";
+import PlayersPopover from "../components/PlayersPopover";
 
 const variants = {
   hidden: {
@@ -17,6 +19,7 @@ const variants = {
 }
 
 const Players = () => {
+  
   return (
     <m.div
       className="h-[85vh] flex justify-center items-center mt-32"
@@ -32,48 +35,18 @@ const Players = () => {
           whileInView="visible"
           className="w-full flex flex-wrap justify-center gap-4 p-10 overflow-y-auto h-full"
         >
-          <m.div variants={variants} className="w-[22%] border rounded-xl flex justify-center flex-wrap p-5 bg-gray-100">
-            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="rounded-full w-36 h-36" />
-            <p className="w-full flex flex-wrap justify-center gap-1 mt-2">
-              <span className="w-full flex justify-center p-2 text-xl font-bold text-center">Nullam Viverra</span>
-              <button>More Info</button>
-            </p>
-          </m.div>
-          <m.div variants={variants} className="w-[22%] border rounded-xl flex justify-center flex-wrap p-5 bg-gray-100">
-            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="rounded-full w-36 h-36" />
-            <p className="w-full flex flex-wrap justify-center gap-1 mt-2">
-              <span className="w-full flex justify-center p-2 text-xl font-bold text-center">Nullam Viverra</span>
-              <button>More Info</button>
-            </p>
-          </m.div>
-          <m.div variants={variants} className="w-[22%] border rounded-xl flex justify-center flex-wrap p-5 bg-gray-100">
-            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="rounded-full w-36 h-36" />
-            <p className="w-full flex flex-wrap justify-center gap-1 mt-2">
-              <span className="w-full flex justify-center p-2 text-xl font-bold text-center">Nullam Viverra</span>
-              <button>More Info</button>
-            </p>
-          </m.div>
-          <m.div variants={variants} className="w-[22%] border rounded-xl flex justify-center flex-wrap p-5 bg-gray-100">
-            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="rounded-full w-36 h-36" />
-            <p className="w-full flex flex-wrap justify-center gap-1 mt-2">
-              <span className="w-full flex justify-center p-2 text-xl font-bold text-center">Nullam Viverra</span>
-              <button>More Info</button>
-            </p>
-          </m.div>
-          <m.div variants={variants} className="w-[22%] border rounded-xl flex justify-center flex-wrap p-5 bg-gray-100">
-            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="rounded-full w-36 h-36" />
-            <p className="w-full flex flex-wrap justify-center gap-1 mt-2">
-              <span className="w-full flex justify-center p-2 text-xl font-bold text-center">Nullam Viverra</span>
-              <button>More Info</button>
-            </p>
-          </m.div>
-          <m.div variants={variants} className="w-[22%] border rounded-xl flex justify-center flex-wrap p-5 bg-gray-100">
-            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="rounded-full w-36 h-36" />
-            <p className="w-full flex flex-wrap justify-center gap-1 mt-2">
-              <span className="w-full flex justify-center p-2 text-xl font-bold text-center">Nullam Viverra</span>
-              <button>More Info</button>
-            </p>
-          </m.div>
+          {
+            PLAYERS.map((player, index) => (
+              <PlayersPopover
+                key={index}
+                name={player.name}
+                description={player.description}
+                avatar={player.avatar}
+                country={player.country}
+                variants={variants}
+              />
+            ))
+          }
         </m.div>
       </div>
     </m.div>

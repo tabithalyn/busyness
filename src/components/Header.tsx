@@ -69,7 +69,7 @@ const Header = ({ toggle, setToggle }:{
               animate="open"
               variants={sideVariants}
             >
-              <MenuOverlay menuList={menuList} />
+              <MenuOverlay menuList={menuList} toggle={toggle} setToggle={setToggle} />
             </m.div>
           </m.aside>
         ) : null}

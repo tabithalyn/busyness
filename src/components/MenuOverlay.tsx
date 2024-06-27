@@ -1,5 +1,12 @@
 import { AnimatePresence, motion as m } from "framer-motion";
-import Link from "react-scroll/modules/components/Link";
+
+type MenuListType = {
+  menuList: {
+    title: string;
+  }[];
+  toggle: boolean;
+  setToggle: (arg0: boolean) => void;
+}
 
 const sideVariants = {
   closed: {
@@ -22,9 +29,14 @@ const sideVariants = {
   }
 }
 
-const MenuOverlay = ({ menuList }:{
-  menuList: {title: string;}[];
-}) => {
+const MenuOverlay = ({ menuList, toggle, setToggle }:MenuListType) => {
+
+  const handleMenuLink = (section:string) => {
+    setToggle(!toggle);
+    document.getElementById(`${section}`)?.scrollIntoView({
+      behavior: "smooth", block: "end", inline: "nearest"
+    });
+  }
 
   return (
     <AnimatePresence>
@@ -40,9 +52,9 @@ const MenuOverlay = ({ menuList }:{
               <p
                 className="text-3xl relative after:bg-white after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
               >
-                <Link to={item.title} smooth={true} duration={200}>
+                <span onClick={() => handleMenuLink(item.title)}>
                   {item.title}
-                </Link>
+                </span>
               </p>
             </div>
           ))}
